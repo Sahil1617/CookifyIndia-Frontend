@@ -3,6 +3,7 @@ import { useGetUserID } from "../hooks/useGetUserID";
 import axios from "axios";
 import "./home.css"; // Custom styling
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap import
+import { Link } from "react-router-dom";  
 
 export const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -67,8 +68,9 @@ export const Home = () => {
       <div className="container my-5">
         <h2 className="text-center text-danger fw-bold mb-5">🔥 Featured Recipes</h2>
         <div className="row">
-          {recipes.map((recipe) => (
-            <div key={recipe._id} className="col-md-4 mb-4">
+        {recipes.map((recipe) => (
+          <div key={recipe._id} className="col-md-4 mb-4 card recipe-card shadow-sm">
+            <Link to={`/recipe/${recipe._id}`} className="text-decoration-none">
               <div className="card recipe-card shadow-sm">
                 <img src={recipe.imageUrl} className="card-img-top" alt={recipe.name} />
                 <div className="card-body">
@@ -79,17 +81,19 @@ export const Home = () => {
                       : recipe.instructions}
                   </p>
                   <p className="text-muted">⏳ {recipe.cookingTime} mins</p>
-                  <button
-                    onClick={() => saveRecipe(recipe._id)}
-                    className={`btn btn-${isRecipeSaved(recipe._id) ? "success" : "danger"} w-100`}
-                    disabled={isRecipeSaved(recipe._id)}
-                  >
-                    {isRecipeSaved(recipe._id) ? "✔️ Added!" : "➕ Add to Saved"}
-                  </button>
                 </div>
               </div>
-            </div>
-          ))}
+            </Link>
+            <button
+              onClick={() => saveRecipe(recipe._id)}
+              className={`btn btn-${isRecipeSaved(recipe._id) ? "success" : "danger"} w-100 mt-2`}
+              disabled={isRecipeSaved(recipe._id)}
+            >
+              {isRecipeSaved(recipe._id) ? "✔️ Added!" : "➕ Add to Saved"}
+            </button>
+          </div>
+      ))}
+
         </div>
       </div>
 

@@ -8,6 +8,7 @@ import { Home } from "./pages/home";
 import { SavedRecipes } from "./pages/saved-recipes";
 import { Privacy } from "./pages/privacy.js";
 import { Terms } from "./pages/terms.js";
+import { RecipeDetail } from "./pages/RecipeDetail"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <div className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/recipe/:id" element={<RecipeDetail />} />
             <Route path="/create-recipe" element={<CreateRecipe />} />
             <Route path="/saved-recipes" element={<SavedRecipes />} />
             <Route path="/auth" element={<Auth />} />
