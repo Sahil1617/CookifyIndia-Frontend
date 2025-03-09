@@ -1,0 +1,93 @@
+/* Custom Navbar Styling */
+.custom-navbar {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient Background */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+}
+
+/* Brand Styling */
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white !important;
+  transition: 0.3s;
+}
+
+.navbar-brand i {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  color: #f8f9fa !important;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  color: white !important;
+  margin: 0 15px;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #000 !important;
+  transform: scale(1.05);
+}
+
+/* Signin / Signup Button */
+.btn-custom {
+  background-color: #f95353;
+  color: #ff7e5f !important;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+  background-color: #ff7e5f;
+  color: white !important;
+  transform: scale(1.1);
+}
+
+/* Logout Button */
+.btn-logout {
+  background-color: #dc3545;
+  color: white;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  border: none;
+}
+
+.btn-logout:hover {
+  background-color: #c82333;
+  transform: scale(1.1);
+}
+
+/* Mobile Toggle Icon */
+.custom-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .navbar-nav {
+      text-align: center;
+      margin-top: 10px;
+  }
+  .navbar-nav .nav-item {
+      margin-bottom: 10px;
+  }
+}

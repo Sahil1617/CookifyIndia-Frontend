@@ -1,0 +1,28 @@
+.privacy-container {
+    max-width: 800px;
+    margin: 50px auto;
+  }
+  
+  .card {
+    border-radius: 10px;
+    background: #fff;
+  }
+  
+  h1 {
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  hr {
+    border-top: 2px solid #eee;
+  }
+  
